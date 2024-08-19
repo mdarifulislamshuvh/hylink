@@ -50,7 +50,6 @@
             background-color: #0056b3;
         }
         .message {
-            color: red;
             margin-top: 10px;
         }
     </style>
@@ -80,6 +79,10 @@
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const message = document.getElementById('message');
+
+            // Debugging: Log values to console
+            console.log('Username:', username);
+            console.log('Password:', password);
 
             // Simple verification for demonstration purposes
             if (username === 'admin' && password === 'password') {
