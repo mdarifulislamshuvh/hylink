@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Predefined correct username and password
+            var correctUsername = "admin";
+            var correctPassword = "admin";
+
+            if (username === correctUsername && password === correctPassword) {
+                // Redirect to another website if login is successful
+                window.location.href = "https://mdarifulislamshuvh.github.io/gbcpslink/";
+            } else {
+                alert("Incorrect username or password!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form onsubmit="validateLogin(event)">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password"><br><br>
+        
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
